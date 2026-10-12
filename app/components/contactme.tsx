@@ -10,7 +10,7 @@ export default function ContactMe() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=be.vidala@gmail.com"
                target="_blank"
                rel="noopener noreferrer"
-            className="bg-animation hover:bg-extra text-white font-text-background py-2 sm:py-4 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-full transition duration-300 gap-2 sm:gap-4 lg:gap-6 mt-4 sm:mt-6 lg:mt-8">
+            className="bg-animation hover:bg-extra text-white font-bold py-2 sm:py-4 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-full transition duration-300 gap-2 sm:gap-4 lg:gap-6 mt-4 sm:mt-6 lg:mt-8">
                 Conversemos
             </a>
         </div>
