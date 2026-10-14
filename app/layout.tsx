@@ -3,6 +3,7 @@ import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import NavBar from "./components/nav-bar";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -27,37 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-screen scroll-smooth flex-col">
         {/* nav */}
-        <nav className="fixed left-0 right-0 top-0 z-40 flex flex-col items-center gap-4 bg-background/90 px-4 backdrop-blur-sm sm:px-8 lg:flex-row lg:gap-0 lg:pt-8">
-          <div className="mt-1 flex justify-center lg:flex-1 lg:justify-start">
-            <a href="#Inicio">
-              <Image
-                src="/icons/logo_home.svg"
-                alt="logo_home"
-                width={180}
-                height={200}
-                className="h-auto w-[140px] sm:w-[180px]"
-                style={{ height: "auto" }}
-              />
-            </a>
-          </div>
-
-          <ul className="flex flex-wrap justify-center gap-2 text-xs sm:gap-4 sm:text-base lg:flex-nowrap lg:text-lg">
-            <li className="rounded-full bg-border/12 p-2 font-bold shadow-sm">
-              <a href="#Inicio">Inicio</a>
-            </li>
-            <li className="rounded-full bg-border/12 p-2 font-bold shadow-sm">
-              <a href="#Tecnologias">Tecnologias</a>
-            </li>
-            <li className="rounded-full bg-border/12 p-2 font-bold shadow-sm">
-              <a href="#Proyectos">Proyectos</a>
-            </li>
-            <li className="rounded-full bg-border/12 p-2 font-bold shadow-sm">
-              <a href="#Contacto">Contacto</a>
-            </li>
-          </ul>
+          <NavBar />
 
           <div className="hidden flex-1 lg:block" />
-        </nav>
 
         {/* BODY-CONTENT */}
         <main className="flex flex-1 flex-col justify-center pb-6 pt-6">
