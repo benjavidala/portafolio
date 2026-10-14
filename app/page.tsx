@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Tecnologias } from "./components/tech-icon";
 import ContactMe from "./components/contactme";
 import ProjectViewer from "./components/proyectcview";
-
+import {FadeIn} from "./components/animations";
 
 export default function Home() {
   return (
@@ -19,11 +19,13 @@ export default function Home() {
           </section>
 
           <section className="justify-center  p-4 rounded-lg bg-border/12 shadow-md max-w-2xl mt-4 px-4 ">
+            <FadeIn>
             <p className="font-bold">
               Backend Developer. Pienso en profundidad,
               diseño con intención y pongo todo a prueba antes de dar nada por terminado. Creo en construir en
               equipo
             </p>
+            </FadeIn>
             <p className="mt-4">
               <span className=" flex text-xs justify-center sm:text-lg lg:text-xl font-black">
                 — las mejores soluciones nacen de distintos puntos de vista.
