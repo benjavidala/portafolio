@@ -52,7 +52,7 @@ export default function Home() {
 
         </section>
         
-        <section id="Proyectos" className="min-h-screen">
+        <section id="Proyectos" className="">
 
           <ProjectViewer />
 
