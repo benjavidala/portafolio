@@ -32,16 +32,16 @@ export default function NavBar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-40 flex flex-col items-center gap-4 bg-background/90 px-4 backdrop-blur-sm sm:px-8 lg:flex-row lg:gap-0 lg:pt-8">
       <div className="mt-1 flex justify-center lg:flex-1 lg:justify-start">
-        <motion.a href="#Inicio"
+        <motion.a href = "https://portafolio-psi-gules-18.vercel.app/"
           whileTap={{scale:0.95}}
           whileHover={{scale:1.25}}
         >
-            <Image
+            <Image 
               src="/icons/logo_home.svg"
               alt="logo_home"
               width={180}
               height={200}
-              className="h-auto w-[140px] sm:w-[180px]"
+              className="h-auto w-[auto] sm:w-[180px] py-2"
               style={{ height: "auto" }}
             />
         </motion.a>

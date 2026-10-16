@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="hidden flex-1 lg:block" />
 
         {/* BODY-CONTENT */}
-        <main className="flex flex-1 flex-col justify-center pb-6 pt-6">
+        <main className="flex flex-1 flex-col justify-center">
           {children}
         </main>
 

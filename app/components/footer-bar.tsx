@@ -1,5 +1,9 @@
+"use client"
+
+
 import Link from "next/link";
 import Image from "next/image";
+import {motion} from "motion/react"
 
 const footerItem = [
     {
@@ -27,11 +31,14 @@ type FooterItemProps = {
 
 export function FooterItem({ href, src, alt }: FooterItemProps) {
     return (
-        <li className="rounded-full bg-border/12 p-2 shadow-sm">
+        <motion.li className="rounded-full bg-border/12 p-2 shadow-sm"
+        whileTap={{scale:0.95}}
+        whileHover={{scale:1.25}}
+        >
             <Link href={href} target="_blank" rel="noopener noreferrer">
                 <Image src={src} alt={alt} width={32} height={32} />
             </Link>
-        </li>
+        </motion.li>
     );
 }
 
