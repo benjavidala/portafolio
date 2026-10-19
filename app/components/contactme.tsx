@@ -1,18 +1,51 @@
+"use client";
 
+import { motion } from "motion/react";
+import type { MouseEvent } from "react";
 
+const EMAIL = "be.vidala@gmail.com";
+const ASUNTO = "Contacto desde tu portafolio";
+
+const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(ASUNTO)}`;
+const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(ASUNTO)}`;
 
 export default function ContactMe() {
-    return (
-        <div className="flex flex-col justify-center items-center min-h-screen gap-1 sm:gap-2 lg:gap-5">   
-            <p className="text-lg sm:text-2xl lg:text-3xl font-bold">¡Trabajemos Juntos!</p>
-            <p className="flex justify-center item-center text-xs sm:text-xl lg:text-2xl ">Escríbeme siempre estoy atento a nuevas oportunidades.</p>
+  function handleClick(e: MouseEvent<HTMLAnchorElement>) {
+    const esTactil = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=be.vidala@gmail.com"
-               target="_blank"
-               rel="noopener noreferrer"
-            className="bg-animation hover:bg-extra text-white font-bold py-2 sm:py-4 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-full transition duration-300 gap-2 sm:gap-4 lg:gap-6 mt-4 sm:mt-6 lg:mt-8">
-                Conversemos
-            </a>
-        </div>
-    );
- }
+    if (!esTactil) {
+      e.preventDefault();
+      window.open(gmail, "_blank", "noopener,noreferrer");
+    }
+  }
+
+    return (
+    <div className="flex min-h-screen flex-col items-center justify-center gap-1 sm:gap-2 lg:gap-5">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="text-lg font-bold sm:text-2xl lg:text-3xl"
+      >
+        ¡Trabajemos Juntos!
+      </motion.p>
+
+      <p className="flex items-center justify-center text-xs sm:text-xl lg:text-2xl">
+        Escríbeme siempre estoy atento a nuevas oportunidades.
+      </p>
+
+      <motion.a
+        href={mailto}
+        onClick={handleClick}
+        initial={{ backgroundColor: "#6a6060" }}
+        whileInView={{ backgroundColor: "#3f3939" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="mt-4 rounded-full px-4 py-2 font-bold text-white sm:mt-6 sm:px-6 sm:py-4 lg:mt-8 lg:px-8"
+      >
+        Conversemos
+      </motion.a>
+    </div>
+  );
+}
