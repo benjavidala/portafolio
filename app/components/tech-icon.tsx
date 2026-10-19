@@ -104,7 +104,7 @@ export function Tecnologias() {
         Mi Stack para construir y desarrollar aplicaciones
       </motion.p>
 
-      {/* Padre del stagger de cards */}
+    
       <motion.div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 lg:grid-cols-3"
             variants={container}
             initial="hidden"
@@ -113,7 +113,7 @@ export function Tecnologias() {
       
       >
         {categorias.map(({ titulo, iconos }) => (
-          // Hijo del grid y padre de sus íconos
+  
           <motion.div key={titulo} variants={card}
             className="flex h-full flex-col items-center rounded-lg bg-border/12 px-6 pb-8 shadow-md"
           >
