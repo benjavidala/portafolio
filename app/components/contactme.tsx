@@ -11,7 +11,8 @@ const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encod
 
 export default function ContactMe() {
   function handleClick(e: MouseEvent<HTMLAnchorElement>) {
-    const esTactil = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+    const esTactil = window.matchMedia("(pointer: coarse)").matches;
+    
 
     if (!esTactil) {
       e.preventDefault();
