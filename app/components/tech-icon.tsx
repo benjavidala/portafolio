@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import {motion} from "motion/react"
+
 
 
 type TechIconProps = {
@@ -12,7 +12,8 @@ type TechIconProps = {
 
 export default function TechIcon({ src, alt, nombre }: TechIconProps) {
   return (
-    <li className="flex flex-col items-center gap-1 w-20 ">
+    <li className="flex flex-col items-center gap-1 w-20 "
+    >
       <div className="h-6 sm:h-8 lg:h-12 w-6 sm:w-8 lg:w-12">
       <Image src={src} alt={alt}  width={30} height={30} className="h-full w-full object-contain" />
       </div>
@@ -58,16 +59,19 @@ export const herramientasIcons2 = [
     { src: "/tecnologias/claude-code.svg", alt: "Icono de Claude Code", nombre: "ClaudeCode" },
     { src: "/tecnologias/visual-studio-code.svg", alt: "Icono de Visual Studio Code", nombre: "VSCode" }
 ];
-
 export function Tecnologias() {
   return (
     <section id="Tecnologias" className="flex min-h-screen flex-col">
-          <p className="flex justify-center font-black text-xs sm:text-xl lg:text-4xl  py-5 sm:py-10 lg:py-20">Mi Stack para construir y desarrollar aplicaciones</p>
+          <p className="flex justify-center font-black text-xs sm:text-xl lg:text-4xl  py-5 sm:py-10 lg:py-20"
+          >Mi Stack para construir y desarrollar aplicaciones</p>
           <div className="flex flex-col items-center  ">  
             <div className="flex flex-col items-center rounded-lg bg-border/12 shadow-md px-6 sm:px-10 lg:px-20 py-2 sm:py-4 lg:py-6">
-            <p className="text-xl font-bold py-10">Backend & Data
+            <p 
+            className="text-xl font-bold py-10"
+            >Backend & Data
             </p>
-            <ul className="flex flex-row gap-5  sm:gap-10 lg:gap-20" >
+            <ul className="flex flex-row gap-5  sm:gap-10 lg:gap-20" 
+            >
               {backendIcons.map(({src,alt,nombre}) => (
                 <TechIcon key={src} src={src} alt={alt} nombre={nombre}/>
               ))}
