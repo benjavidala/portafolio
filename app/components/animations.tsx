@@ -1,7 +1,7 @@
 // components/FadeIn.tsx
 "use client";
 
-import { motion, type HTMLMotionProps } from "motion/react";
+import { motion, type HTMLMotionProps, type Variants } from "motion/react";
 
 
 const container: Variants = {
