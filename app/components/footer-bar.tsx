@@ -8,7 +8,7 @@ import {motion} from "motion/react"
 const footerItem = [
     {
         href: "https://drive.google.com/file/d/1RHU1OCzJePOCpgIsMqjjTRIitFOLrrXP/view?usp=drive_link",
-        src: "/icons/cv.png",
+        src: "/icons/cv.svg",
         alt: "cv",
     },
     {
