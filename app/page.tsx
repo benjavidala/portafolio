@@ -47,7 +47,7 @@ export default function Home() {
         {/* Columna derecha: foto*/}
         <section className="flex flex-col">
 
-          <Image className="object-contain" src="/photos/foto pagina.png" loading="eager" alt="foto perfil" width={400} height={400}  />
+          <Image className="object-contain" src="/photos/perfilcircle.png" loading="eager" alt="foto perfil" width={400} height={400}  />
 
           <p>
             <RollAnimationImage className= "flex text-xs justify-center items-center">
